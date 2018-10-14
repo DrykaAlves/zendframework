@@ -9,9 +9,9 @@ echo 'Senha: ' . $this->formRow($form->get('senha')) . '<br>';
 echo $this->formSubmit($form->get('submit')) . '<br>';
 echo $this->form()->closeTag();
 
-//Mesmo que:
-//<form method='POST'>
-//	<label for='email'>Email:</label><input type='text' name='email' id='email'> <br />
-//	<label for='senha'>Senha:</label><input type='password' name='senha' id='senha'> <br />
-//	<input type='submit' value='Cadastrar'>
-//</form>
+?>
+
+<br>
+
+<a href="<?php echo $this->url(array('controller' => 'router', 
+    'action' => 'index')); ?>">Voltar</a>

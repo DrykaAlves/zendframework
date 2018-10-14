@@ -14,13 +14,10 @@ class UsuarioGateway
 
     public function persistir(Usuario $model)
     {
-        $dados = [
-            'id'    => $model->id,
-            'email' => $model->email,
-            'senha' => $model->senha,
-        ];
+       
+        $model->getArrayCopy();
 
-        $this->tableGateway->insert($dados);
+        $this->tableGateway->insert($model);
     }
 
     public function listar()
@@ -39,13 +36,9 @@ class UsuarioGateway
         $this->tableGateway->delete(['id' => $model->id]);
     }
 
-    public function atualizar($model)
+    public function atualizar(Usuario $model)
     {
-        $dados = [
-            'id'    => $model->id,
-            'email' => $model->email,
-            'senha' => $model->senha,
-        ];
+        $model->getArrayCopy();
 
         $this->tableGateway->update($dados, ['id' => $model->id]);
     }

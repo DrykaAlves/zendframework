@@ -1,1 +1,16 @@
-<?= $this->email; ?>
+Aluna: Adriana Alves. <br> Email: <?= $this->email; ?> <br>
+
+<p><b>ESCOLHA UMA DAS OPÇÕES ABAIXO: </b></p>
+
+<br>
+
+<a href="<?php echo $this->url(array('controller' => 'usuario_cadastrar', 
+    'action' => 'cadastrar')); ?>">Cadastro de Usuários</a>
+
+<br>
+
+
+<a href="<?php echo $this->url(array('controller' => 'usuario_perfil', 
+    'action' => 'visualizar')); ?>">Listar Usuários</a>
+
+<br>
