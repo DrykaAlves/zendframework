@@ -1,0 +1,15 @@
+<?php
+
+echo "<center><h1>VISUALIZAÇÃO</h1></center><br />";
+
+foreach ($this->dados as $model) {
+    printf('<a href="/usuario/%d">%d</a> -> %s <a href="/usuario/excluir/%d"> X </a><br>', $model->id, $model->id, $model->email, $model->id);
+   
+}
+    
+    // entenda:
+    // %d - digito
+    // %s - string
+
+
+?>
